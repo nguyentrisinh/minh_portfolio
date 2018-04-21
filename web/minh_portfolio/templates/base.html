@@ -1,0 +1,115 @@
+{% load cms_tags menu_tags sekizai_tags %}
+<!doctype html>
+<html>
+    <head>
+        <title>{% block title %}This is my new project home page{% endblock title %}</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+                <!-- Page title -->
+        <title>Macron | Minimal HTML Portfolio Template</title>
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/static/img/favicon.ico">
+        <!-- Font Awesome Stylesheet -->
+        <link rel="stylesheet" href="/static/css/font-awesome.css">
+        <!-- Bootstrap Stylesheet -->
+        <link rel="stylesheet" href="/static/css/bootstrap.css">
+        <!-- Lightbox Stylesheet -->
+        <link rel="stylesheet" href="/static/css/jquery.fancybox.css">
+        <!-- Animate.CSS Stylesheet -->
+        <link rel="stylesheet" href="/static/css/animate.css">
+        <!-- Custom Stylesheet -->
+        <link rel="stylesheet" href="/static/css/style.default.css">
+
+        {% render_block "css" %}
+    </head>
+    <body>
+        {% cms_toolbar %}
+        <!--<div class="container">-->
+            <!--<ul class="nav">-->
+                <!--{% show_menu 0 100 100 100 %}-->
+            <!--</ul>-->
+        <!--</div>-->
+
+        <!--=============== Navbar ===============-->
+        <nav class="main-navbar">
+
+            <div class="main-navbar-header">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <!-- Navbar Brand -->
+                    <a href="#" class="navbar-brand">
+                        <img src="img/logo.png" alt="..." width="35">
+                    </a>
+
+                    <!-- Open Menu Btn -->
+                    <button id="navbar-open">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Navbar Menu Holder -->
+            <div class="navbar-outer">
+                <div class="navbar-inner d-flex justify-content-center align-items-center">
+                    <a id="close-btn" href="#">
+                        <img src="img/close.svg" alt="close" class="img-fluid">
+                    </a>
+
+                     <!-- Navbar Menu -->
+                    <ul class="navbar-menu list-unstyled text-center">
+                        <li>
+                            <a href="#hero">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li>
+                            <a href="#services">Services</a>
+                        </li>
+                        <li>
+                            <a href="#resume">Resume</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+        <!--=============== End Navbar ===============-->
+
+        {% block content %}{% endblock content %}
+
+
+        <!-- Jquery CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <!-- Tether CDN [required for Bootstrap 4 tooltip]-->
+        <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="/static/js/bootstrap.min.js"></script>
+        <!-- Mixitup -->
+        <script src="/static/js/mixitup.min.js"></script>
+        <!-- FancyBox -->
+        <script src="/static/js/jquery.fancybox.min.js"></script>
+        <!-- Counter Up -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+        <script src="/static/js/jquery.counterup.min.js"></script>
+        <!-- Smooth Scroll -->
+        <script src="/static/js/easyscroll.min.js"></script>
+        <!-- WOW.Js -->
+        <script src="/static/js/wow.min.js"></script>
+        <!-- jQuery Validator -->
+        <script src="/static/js/jquery.validate.min.js"></script>
+        <!-- Custom Script -->
+        <script src="/static/js/script.js"></script>
+
+        {% render_block "js" %}
+    </body>
+</html>
