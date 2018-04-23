@@ -1,0 +1,27 @@
+<!-- Education Panel [Timeline Holder]-->
+<div class="timeline-holder education">
+    <h2 class="text-center wow fadeInUp">{{ instance.title }}</h2>
+
+    <!-- Timeline -->
+    <div class="timeline">
+        <div class="timeline-body">
+
+            {% for timeline in instance.timelineblock_set.all %}
+            <!-- Timeline block [left block] -->
+            <div class="timeline-block {% if timeline.is_left %}block-left {% else %} block-right {% endif %}">
+                <h3 class="display-3">{{ timeline.title }}</h3>
+                <p>
+                    {% if timeline.url is not None and timeline.url != '' %}
+                    <a href="{{ timeline.url }}" target="_blank">{{ timeline.content }}</a>
+                    {% else %}
+                    {{ timeline.content }}
+                    {% endif %}
+                    <br>
+                    {{ timeline.period_time }}
+                    <br>
+                </p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<!--=============== Statistics Section ===============-->
+<section class="statistics gray-bg has-gradient-both" id="statistics">
+    <div class="container">
+        <div class="row">
+            {% for statistic in instance.statisticitem_set.all %}
+            <div class="col-lg-3 col-md-6">
+                <div class="item text-center">
+                    <strong class="counter">{{ statistic.statistic }}</strong>
+                    <h4 class="display-4">{{ statistic.title }}</h4>
+                    <div class="ellipsis"></div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!--=============== End Statistics Section ===============-->

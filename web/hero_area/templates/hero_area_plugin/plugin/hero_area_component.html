@@ -1,0 +1,30 @@
+<!--=============== Hero Section ===============-->
+<section class="hero gray-bg" id="hero" style="background: url({{instance.background_image.url}}) no-repeat; background-size: cover;">
+    <div class="container d-flex align-items-center">
+
+        <div class="heading">
+            <p class="wow fadeInUp">{{ instance.title }}</p>
+            <h1 class="wow fadeInUp" data-wow-delay="0.3s">{{ instance.name }}<span class="ellipsis"></span></h1>
+            <p class="wow fadeInUp" data-wow-delay="0.6s">{{ instance.working_position }}</p>
+            <ul class="social list-unstyled list-inline wow fadeInUp" data-wow-delay="0.9s">
+                {% if instance.linkedin_url != '' and instance.linkedin_url is not null %}
+                <li class="list-inline-item">
+                    <a href="{{ instance.linkedin_url }}" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+                </li>
+                {% endif %}
+                {% if instance.github_url != '' and instance.github_url is not null %}
+                <li class="list-inline-item">
+                    <a href="{{ instance.github_url }}" title="Github" target="_blank"><i class="fa fa-github"></i></a>
+                </li>
+                {% endif %}
+                {% if instance.facebook_url != '' and instance.facebook_url is not null %}
+                <li class="list-inline-item">
+                    <a href="{{ instance.facebook_url }}" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+
+    </div>
+</section>
+<!--=============== End Hero Section ===============-->

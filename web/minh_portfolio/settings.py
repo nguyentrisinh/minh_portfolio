@@ -144,6 +144,9 @@ INSTALLED_APPS = (
     'aldryn_style',
     'taggit_autosuggest',
 
+    'hero_area',
+    'about_me',
+
     'minh_portfolio'
 )
 
@@ -173,6 +176,7 @@ CMS_LANGUAGES = {
 CMS_TEMPLATES = (
     ## Customize this
     ('fullwidth.html', 'Fullwidth'),
+    ('homepage.html', 'Homepage'),
     ('sidebar_left.html', 'Sidebar Left'),
     ('sidebar_right.html', 'Sidebar Right')
 )

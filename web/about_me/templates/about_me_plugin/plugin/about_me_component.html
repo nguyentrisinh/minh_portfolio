@@ -1,0 +1,12 @@
+<!--=============== About Section ===============-->
+<section class="about" id="about">
+    <div class="container">
+        <h2 class="has-ellipsis-left">{{ instance.title }}</h2>
+        {{ instance.description }}
+
+        {% if instance.resume_file != '' and instance.resume_file is not null %}
+        <a href="{{ instance.resume_file.url }}" class="btn btn-template" target="_blank">Download CV</a>
+        {% endif %}
+    </div>
+</section>
+<!--=============== End About Section ===============-->
