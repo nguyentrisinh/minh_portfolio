@@ -146,6 +146,8 @@ INSTALLED_APPS = (
 
     'hero_area',
     'about_me',
+    'contact_me',
+    'portfolio_app',
 
     'minh_portfolio'
 )

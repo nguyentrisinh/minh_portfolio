@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load cms_tags sekizai_tags %}
+
+{% block content %}
+    {% addtoblock 'css' %}
+        <link rel="stylesheet" href="/static/css/custom-style.css">
+    {% endaddtoblock %}
+
+    <div class="body-container">
+
+        <!-- breadcrumbs start -->
+        <section class="breadcrumbs-area ptb-40 port bread-card solid-color">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="breadcrumbs">
+                            <h2 class="page-title">PROJECTS
+                                <span class="ellipsis"></span>
+                            </h2>
+                            <br/>
+                            <h4>I have not failed. I've just found 10,000 ways that won't work</h4>
+                            <h5>Thomas A. Edison</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- breadcrumbs end -->
+
+        <div class="header-portfolio pt-40">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 history-text-custom">
+                        <h2>Personal</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Object-->
+        {% for project in object_list %}
+        <section class="portfolio-details pb-40">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="portfolio-meta">
+                            <ul>
+                                <li class="row">
+                                    <div class="col-md-4 no-padding-right">
+                                        <i class="fa fa-building"></i>
+                                        <span>Client</span>
+                                    </div>
+                                    <div class="col-md-8 no-padding-left">
+                                        {{ project.client }}
+                                    </div>
+                                </li>
+                                <li class="row">
+                                    <div class="col-md-4 no-padding-right">
+                                        <i class="fa fa-user"></i>
+                                        <span>Role</span>
+                                    </div>
+                                    <div class="col-md-8 no-padding-left">
+                                        {{ project.roles }}
+                                    </div>
+                                </li>
+                                <li class="row">
+                                    <div class="col-md-4 no-padding-right">
+                                        <i class="fa fa-coffee"></i>
+                                        <span>Skills</span>
+                                    </div>
+                                    <div class="col-md-8 no-padding-left">
+                                        {{ project.skills }}
+                                    </div>
+                                </li>
+                                <li class="row">
+                                    <div class="col-md-4 no-padding-right">
+                                        <i class="fa fa-calendar"></i>
+                                        <span>Length</span>
+                                    </div>
+                                    <div class="col-md-8 no-padding-left">
+                                        {{ project.length }}
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="project-desc">
+                            <h3>
+                                <span class="ellipsis"></span> {{ project.title }}
+                                <ul class="horizontal float-right">
+                                    <li>
+                                        <a data-toggle="modal" data-target="#screenshotModal{{ project.slug }}" class="pointer">
+                                            <i class="fa fa-picture-o"></i>
+                                        </a>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="screenshotModal-\{{ project.slug }}" tabindex="-1" role="dialog"
+                                             aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-body">
+                                                        <div id="carouselScreenshotControls" class="carousel slide"
+                                                             data-ride="carousel">
+                                                            <div class="carousel-inner">
+                                                                {% for media in project.mediaasset_set.all %}
+                                                                <div class="carousel-item {% if forloop.first %}active {% endif %}">
+                                                                    <img class="d-block img-slide"
+                                                                         src="{{ media.media_asset.url }}"
+                                                                         alt="{{ media.name }}"/>
+                                                                </div>
+                                                                {% endfor %}
+                                                            </div>
+                                                            <a class="carousel-control-prev"
+                                                               href="#carouselScreenshotControls" role="button"
+                                                               data-slide="prev">
+                                                            <span class="carousel-control-prev-icon"
+                                                                  aria-hidden="true"></span>
+                                                                <span class="sr-only">Previous</span>
+                                                            </a>
+                                                            <a class="carousel-control-next"
+                                                               href="#carouselScreenshotControls" role="button"
+                                                               data-slide="next">
+                                                            <span class="carousel-control-next-icon"
+                                                                  aria-hidden="true"></span>
+                                                                <span class="sr-only">Next</span>
+                                                            </a>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </h3>
+                            <p>{{ project.short_description }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endfor %}
+
+        <hr>
+    </div>
+
+    {% addtoblock "js" %}
+
+    {% endaddtoblock %}
+
+{% endblock %}
