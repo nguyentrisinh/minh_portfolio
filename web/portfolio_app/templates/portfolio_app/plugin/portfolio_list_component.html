@@ -1,0 +1,38 @@
+<!--=============== Portfolio Section ===============-->
+<section class="portfolio gray-bg has-gradient-both" id="portfolio">
+    <div class="container">
+        <h2 class="has-ellipsis-left">My Portfolio</h2>
+
+        <!-- Gallery Navigation -->
+        <div class="gallery text-center">
+            <ul class="controls list-inline">
+                <li class="list-inline-item">
+                    <div class="filter" data-filter="all">All</div>
+                </li>
+                {% for tag in tags %}
+                <li class="list-inline-item">
+                    <div class="filter" data-filter=".{{ tag.filter_tag }}">{{ tag.name }}</div>
+                </li>
+                {% endfor %}
+            </ul>
+
+            <!-- Gallery Items -->
+            <div id="gallery" class="row">
+                {% for project in projects %}
+                <div class="mix {% for tag in project.tags.all %} {{ tag.filter_tag }} {% endfor %}col-lg-4 col-md-6">
+                    <div class="item wow fadeInUp">
+                        <a href="{{ project.top_image.url }}" class="image" data-fancybox="gallery">
+                            <img src="{{ project.top_image.url }}" class="img-fluid" alt="...">
+                            <div class="overlay hidden-sm-down d-flex justify-content-center align-items-center">
+                                <div class="icon"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+
+        </div>
+    </div>
+</section>

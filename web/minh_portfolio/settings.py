@@ -28,8 +28,7 @@ SECRET_KEY = 'o45_5dlw%)+gqbkixa#1xvizhc)a$p1xkw29!(9)7i^r$e1sdz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['web', 'localhost']
 
 # Application definition
 
@@ -178,7 +177,9 @@ CMS_LANGUAGES = {
 CMS_TEMPLATES = (
     ## Customize this
     ('fullwidth.html', 'Fullwidth'),
+    ('about.html', 'About Me'),
     ('homepage.html', 'Homepage'),
+    ('contact.html', 'Contact'),
     ('sidebar_left.html', 'Sidebar Left'),
     ('sidebar_right.html', 'Sidebar Right')
 )
@@ -192,10 +193,11 @@ DATABASES = {
         # Local Database
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'minh_portfolio_db',
+        # 'NAME': 'minh_portfolio_db_test',
         'USER': 'postgres',
         'PASSWORD': 'sinh1996',
-        'HOST': 'localhost',
-        # 'HOST': 'db',
+        # 'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': '',
     }
 }

@@ -1,0 +1,17 @@
+/*Custom style*/
+
+/*Navigator style*/
+.nav-list-style li {
+    margin-left: 1.5em;
+}
+
+.nav-list-style li:hover {
+    color: #59D55E;
+}
+
+.hire_me_btn_style {
+    color: #37a200 !important;
+}
+.hire_me_btn_style:hover {
+    color: #48e300 !important;
+}

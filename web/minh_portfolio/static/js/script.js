@@ -18,7 +18,8 @@ $(document).ready(function () {
         });
     });
 
-    $('#close-btn, nav.main-navbar a').on('click', function (e) {
+    // $('#close-btn, nav.main-navbar a').on('click', function (e) {
+    $('#close-btn').on('click', function (e) {
         e.preventDefault();
         $('.navbar-inner').removeClass('active');
         setTimeout(function () { $('.navbar-outer').hide(); }, 600);

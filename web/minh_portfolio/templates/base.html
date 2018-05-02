@@ -21,16 +21,13 @@
         <!-- Custom Stylesheet -->
         <link rel="stylesheet" href="/static/css/style.default.css">
 
+        <!-- Custom Stylesheet -->
+        <link rel="stylesheet" href="/static/css/custom.css">
+
         {% render_block "css" %}
     </head>
     <body>
         {% cms_toolbar %}
-        <!--<div class="container">-->
-            <!--<ul class="nav">-->
-                <!--{% show_menu 0 100 100 100 %}-->
-            <!--</ul>-->
-        <!--</div>-->
-
         <!--=============== Navbar ===============-->
         <nav class="main-navbar">
 
@@ -42,12 +39,20 @@
                     </a>
 
                     <!-- Open Menu Btn -->
-                    <button id="navbar-open">
+                    <button id="navbar-open" class="hidden-lg-up">
                         <span></span>
                         <span></span>
                         <span></span>
                         <span></span>
                     </button>
+
+                    <ul class="nav nav-list-style hidden-md-down">
+                        {% show_menu 0 100 100 100 %}
+                        <li class="child sibling">
+                            <a class="hire_me_btn_style" href="https://www.upwork.com/o/profiles/users/_~01099391654d0f2fa1/" target="_blank">Hire Me</a>
+                        </li>
+                    </ul>
+
                 </div>
             </div>
 
@@ -60,23 +65,9 @@
 
                      <!-- Navbar Menu -->
                     <ul class="navbar-menu list-unstyled text-center">
-                        <li>
-                            <a href="#hero">Home</a>
-                        </li>
-                        <li>
-                            <a href="#about">About</a>
-                        </li>
-                        <li>
-                            <a href="#services">Services</a>
-                        </li>
-                        <li>
-                            <a href="#resume">Resume</a>
-                        </li>
-                        <li>
-                            <a href="#portfolio">Portfolio</a>
-                        </li>
-                        <li>
-                            <a href="#contact">Contact</a>
+                        {% show_menu 0 100 100 100 %}
+                        <li class="child sibling">
+                            <a class="hire_me_btn_style" href="https://www.upwork.com/o/profiles/users/_~01099391654d0f2fa1/" target="_blank">Hire Me</a>
                         </li>
                     </ul>
                 </div>
@@ -127,7 +118,17 @@
         </div>
         <!--=============== End Scroll To Top Button ===============-->
 
-
+        <!--=============== Preloader ===============-->
+{#        <div class="preloader">#}
+{#            <div class="preloader-inner d-flex align-items-center justify-content-center">#}
+{##}
+{#                <div class="circle-big">#}
+{#                    <div class="circle-small"></div>#}
+{#                </div>#}
+{##}
+{#            </div>#}
+{#        </div>#}
+        <!--=============== End Preloader ===============-->
 
         <!-- Jquery CDN -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

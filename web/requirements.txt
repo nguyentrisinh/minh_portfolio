@@ -1,3 +1,4 @@
+aldryn-style==1.1.4
 dj-database-url==0.5.0
 Django==1.11.12
 django-classy-tags==0.8.0
@@ -7,6 +8,8 @@ django-formtools==2.1
 django-mptt==0.8.7
 django-polymorphic==2.0.2
 django-sekizai==0.10.0
+django-taggit==0.22.2
+django-taggit-autosuggest==0.3.3
 django-treebeard==4.3
 djangocms-admin-style==1.2.8
 djangocms-attributes-field==0.3.0
@@ -21,8 +24,10 @@ djangocms-style==2.0.2
 djangocms-text-ckeditor==3.6.0
 djangocms-video==2.0.4
 easy-thumbnails==2.5
+gunicorn==19.8.1
 html5lib==0.9999999
 Pillow==5.1.0
+psycopg2==2.7.4
 pytz==2018.4
 six==1.11.0
 tzlocal==1.5.1

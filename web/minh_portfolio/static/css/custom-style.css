@@ -96,3 +96,13 @@ a:hover {
 .carousel-control-prev {
     left: -20px;
 }
+
+/*Project Title Style*/
+.project-title {
+    display: inline;
+}
+
+.project-title:hover {
+    display: inline;
+    color: #59D55E;
+}

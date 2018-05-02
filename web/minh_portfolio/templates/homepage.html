@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load cms_tags %}
+{% load cms_tags sekizai_tags %}
 
 {% block title %}{% page_attribute "page_title" %}{% endblock title %}
 
@@ -21,8 +21,20 @@
     </section>
     <!--=============== End resume section ===============-->
 
-    {% placeholder "contact_me" %}
+    <!--=============== Contact Me section ===============-->
+    {% placeholder "portfolio" %}
+    <!--=============== End Contact Me section ===============-->
 
+    <!--=============== Contact Me section ===============-->
+    {% placeholder "contact_me" %}
+    <!--=============== End Contact Me section ===============-->
+
+
+{#    {% addtoblock "js" %}#}
+{#        $(document).ready(function () {#}
+{#            var mixer = mixitup('#gallery');#}
+{#        });#}
+{#    {% endaddtoblock %}#}
 
 
 {% endblock content %}

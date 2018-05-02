@@ -41,7 +41,7 @@ class Project(CMSPlugin):
     sub_title = models.CharField(max_length=250, null=True, blank=True)
     short_description = models.TextField(default='')
     description = HTMLField(_('description'), blank=True, default='')
-    skills = models.CharField(max_length=255, null=True, blank=True, default='' )
+    skills = models.CharField(max_length=255, null=True, blank=True, default='')
     roles = models.CharField(max_length=255, null=True, blank=True, default='')
     client = models.CharField(max_length=255, null=True, blank=True, default='')
     length = models.CharField(max_length=50, null=True, blank=True, default='')
@@ -50,6 +50,9 @@ class Project(CMSPlugin):
     top_image = models.ImageField(upload_to='portfolio/img/top_image/', max_length=500, null=False, blank=False,
                                   default='')
     # published_date = models.DateTimeField(null=True, blank=True)
+
+    # Placeholder property
+    heading = PlaceholderField('project_heading')
 
     tags = models.ManyToManyField(Tag, verbose_name=_('tag'), related_name='project')
 
@@ -102,5 +105,7 @@ class DemoUrlItem(models.Model):
 
     def __str__(self):
         return '{}: {} - {}'.format(self.project_id.title, self.get_type_display(), self.demo_url)
+
+
 
 

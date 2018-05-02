@@ -30,3 +30,15 @@ class ProjectIndexView(generic.ListView):
         context['tags'] = tags
 
         return context
+
+
+class ProjectDetailView(generic.DetailView):
+    model = Project
+    template_name = 'portfolio_app/detail.html'
+    slug_field = 'slug'
+
+    def get_context_data(self, **kwargs):
+        context = super(ProjectDetailView, self).get_context_data(**kwargs)
+        object = context['object']
+
+        return context

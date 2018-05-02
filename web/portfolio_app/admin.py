@@ -1,4 +1,5 @@
 from django.contrib import admin
+from cms.admin.placeholderadmin import PlaceholderAdminMixin
 
 from .models import Tag, Project, MediaAsset, DemoUrlItem
 
@@ -17,7 +18,7 @@ class DemoUrlItemInline(admin.StackedInline):
     model = DemoUrlItem
 
 
-class ProjectAdmin(admin.ModelAdmin):
+class ProjectAdmin(PlaceholderAdminMixin, admin.ModelAdmin):
     inlines = [
         MediaAssetInline,
         DemoUrlItemInline
