@@ -47,6 +47,9 @@ class Project(CMSPlugin):
     length = models.CharField(max_length=50, null=True, blank=True, default='')
     demo_url = models.URLField(max_length=255, null=True, blank=True, default='')
     youtube_embed_url = models.CharField(max_length=255, null=True, blank=True, default='')
+
+    # Images
+    icon_image = models.ImageField(upload_to='portfolio/img/icon_image/', max_length=500, null=False, blank=True, default='')
     top_image = models.ImageField(upload_to='portfolio/img/top_image/', max_length=500, null=False, blank=False,
                                   default='')
     # published_date = models.DateTimeField(null=True, blank=True)

@@ -3,7 +3,7 @@
 
 {% block content %}
     {% addtoblock 'css' %}
-        <link rel="stylesheet" href="/static/css/custom-style.css">
+        <link rel="stylesheet" href="/minhlt/static/css/custom-style.css">
     {% endaddtoblock %}
 
     <section class="body-container">
@@ -89,8 +89,26 @@
                             <div class="col-md-8">
                                 <div class="project-desc">
                                     <h3>
-                                        <span class="ellipsis"></span><a class="project-title" href="/portfolio/{{ project.slug }}">{{ project.title }}</a>
+                                        <span class="ellipsis"></span>
+{#                                        <a class="project-title" href="/portfolio/{{ project.slug }}">{{ project.title }}</a>#}
+                                        {{ project.title }}
                                         <ul class="horizontal float-right">
+
+                                            {% for demo_url in project.demourlitem_set.all %}
+                                                <li>
+                                                <a href="{{ demo_url.demo_url }}" class="pointer">
+                                                    {% if demo_url.type == 1 %}
+                                                        <i class="fa fa-apple"></i>
+                                                    {% elif demo_url.type == 2 %}
+                                                        <i class="fa fa-android"></i>
+                                                    {% elif demo_url.type == 3 %}
+                                                        <i class="fa fa-globe"></i>
+                                                    {% endif %}
+                                                </a>
+                                            </li>
+                                            {% endfor %}
+
+
                                             <li>
                                                 <a data-toggle="modal" data-target="#screenshotModal-{{ project.slug }}"
                                                    class="pointer">

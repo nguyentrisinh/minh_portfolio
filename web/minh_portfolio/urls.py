@@ -12,19 +12,44 @@ from django.views.static import serve
 
 admin.autodiscover()
 
-urlpatterns = [
+# urlpatterns = [
+#     url(r'^sitemap\.xml$', sitemap,
+#         {'sitemaps': {'cmspages': CMSSitemap}}),
+# ]
+#
+# urlpatterns += i18n_patterns(
+#     url(r'^admin/', include(admin.site.urls)),  # NOQA
+#     url(r'^', include('cms.urls')),
+# )
+#
+# # This is only needed when using runserver.
+# if settings.DEBUG:
+#     urlpatterns = [
+#         url(r'^media/(?P<path>.*)$', serve,
+#             {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
+#         ] + staticfiles_urlpatterns() + urlpatterns
+
+
+urlpatterns_main = [
     url(r'^sitemap\.xml$', sitemap,
         {'sitemaps': {'cmspages': CMSSitemap}}),
 ]
 
-urlpatterns += i18n_patterns(
+urlpatterns_main += [
     url(r'^admin/', include(admin.site.urls)),  # NOQA
     url(r'^', include('cms.urls')),
-)
+]
 
 # This is only needed when using runserver.
-if settings.DEBUG:
-    urlpatterns = [
-        url(r'^media/(?P<path>.*)$', serve,
-            {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
-        ] + staticfiles_urlpatterns() + urlpatterns
+# if settings.DEBUG:
+#     urlpatterns = [
+#         url(r'^minhlt/media/(?P<path>.*)$', serve,
+#             {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
+#         ] + staticfiles_urlpatterns() + urlpatterns_main
+
+
+urlpatterns = [
+    url(r'^minhlt/media/(?P<path>.*)$', serve,
+        {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
+    url(r'^minhlt/', include(urlpatterns_main))
+    ] + staticfiles_urlpatterns()
