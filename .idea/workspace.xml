@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a24433ad-9512-4112-b3fe-eef5a93026c2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/minh_portfolio/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/minh_portfolio/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/minh_portfolio/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/minh_portfolio/static/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/minh_portfolio/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/minh_portfolio/templates/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/minh_portfolio/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+            <state relative-caret-position="204">
+              <caret line="69" column="62" selection-start-line="69" selection-start-column="62" selection-end-line="69" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -58,11 +61,11 @@
       <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="70" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="226">
+              <caret line="161" column="26" lean-forward="true" selection-start-line="161" selection-start-column="26" selection-end-line="161" selection-end-column="26" />
               <folding>
                 <element signature="e#1966#2052#0#HTML" expanded="true" />
-                <element signature="e#1572#10657#0#HTML" />
+                <element signature="e#372#6742#0#HTML" />
               </folding>
             </state>
           </provider>
@@ -95,20 +98,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/minh_portfolio/settings.py">
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/minh_portfolio/static/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="202" column="19" lean-forward="true" selection-start-line="202" selection-start-column="19" selection-end-line="202" selection-end-column="19" />
+            <state relative-caret-position="515">
+              <caret line="32" column="25" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homepage.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/minh_portfolio/templates/homepage.html">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/minh_portfolio/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+            <state relative-caret-position="447">
+              <caret line="202" column="19" lean-forward="true" selection-start-line="202" selection-start-column="19" selection-end-line="202" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -167,14 +170,14 @@
         <option value="$PROJECT_DIR$/web/minh_portfolio/templates/about.html" />
         <option value="$PROJECT_DIR$/web/minh_portfolio/templates/homepage.html" />
         <option value="$PROJECT_DIR$/web/minh_portfolio/static/js/script.js" />
-        <option value="$PROJECT_DIR$/web/minh_portfolio/static/css/custom.css" />
-        <option value="$PROJECT_DIR$/web/minh_portfolio/templates/base.html" />
         <option value="$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/plugin/portfolio_list_component.html" />
         <option value="$PROJECT_DIR$/web/minh_portfolio/urls.py" />
         <option value="$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/index.html" />
         <option value="$PROJECT_DIR$/web/portfolio_app/models.py" />
         <option value="$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/detail.html" />
         <option value="$PROJECT_DIR$/web/minh_portfolio/settings.py" />
+        <option value="$PROJECT_DIR$/web/minh_portfolio/static/css/custom.css" />
+        <option value="$PROJECT_DIR$/web/minh_portfolio/templates/base.html" />
       </list>
     </option>
   </component>
@@ -672,13 +675,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/minh_portfolio/static/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/minh_portfolio/static/css/custom-style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1615">
@@ -755,13 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/minh_portfolio/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/portfolio_app/migrations/0007_auto_20180503_0953.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -771,19 +760,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        <state relative-caret-position="226">
+          <caret line="161" column="26" lean-forward="true" selection-start-line="161" selection-start-column="26" selection-end-line="161" selection-end-column="26" />
           <folding>
             <element signature="e#1966#2052#0#HTML" expanded="true" />
-            <element signature="e#1572#10657#0#HTML" />
+            <element signature="e#372#6742#0#HTML" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/minh_portfolio/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
+        <state relative-caret-position="447">
           <caret line="202" column="19" lean-forward="true" selection-start-line="202" selection-start-column="19" selection-end-line="202" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/minh_portfolio/static/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/minh_portfolio/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="69" column="62" selection-start-line="69" selection-start-column="62" selection-end-line="69" selection-end-column="62" />
         </state>
       </provider>
     </entry>

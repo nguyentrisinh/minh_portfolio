@@ -2,16 +2,34 @@
 
 /*Navigator style*/
 .nav-list-style li {
-    margin-left: 1.5em;
+    /*margin-left: 1.5em;*/
 }
 
 .nav-list-style li:hover {
     color: #59D55E;
 }
 
+.nav-list-style li a{
+    /*margin-left: 1.5em;*/
+    padding: 10px 25px;
+}
+
 .hire_me_btn_style {
-    color: #37a200 !important;
+    /*color: #37a200 !important;*/
+    padding: 10px 25px;
+    background-color: #37a200;
+    color: #FFFFFF!important;
+    font-weight: bold;
 }
 .hire_me_btn_style:hover {
+    /*color: #48e300 !important;*/
+    background-color: #48e300;
+}
+
+.hire-me-btn-style-mobile {
+    color: #37a200 !important;
+}
+
+.hire-me-btn-style-mobile:hover {
     color: #48e300 !important;
 }
