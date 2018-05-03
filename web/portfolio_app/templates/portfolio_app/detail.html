@@ -3,124 +3,218 @@
 
 {% block content %}
     {% addtoblock 'css' %}
-        <link rel="stylesheet" href="/static/css/custom-style.css">
+        <link rel="stylesheet" href="/minhlt/static/css/custom-style.css">
+        <style lang="css">
+            @media only screen and (min-width: 970px) {
+                .carousel-inner .carousel-item-right.active,
+                .carousel-inner .carousel-item-next {
+                  transform: translateX(33.33333%);
+                }
+
+                .carousel-inner .carousel-item-left.active,
+                .carousel-inner .carousel-item-prev {
+                  transform: translateX(-33.33333%)
+                }
+
+                .carousel-inner .carousel-item-right,
+                .carousel-inner .carousel-item-left{
+                  transform: translateX(0);
+                }
+                .max-media-img-height {
+                    height: 50%!important;
+                }
+            }
+
+            @media only screen and (max-width: 969.99px) {
+                .carousel-inner .carousel-item-right.active,
+                .carousel-inner .carousel-item-next {
+                  transform: translateX(100%);
+                }
+
+                .carousel-inner .carousel-item-left.active,
+                .carousel-inner .carousel-item-prev {
+                  transform: translateX(-100%)
+                }
+
+                .carousel-inner .carousel-item-right,
+                .carousel-inner .carousel-item-left{
+                  transform: translateX(0);
+                }
+                .max-media-img-height {
+                    height: 33.33333%!important;
+                }
+                .title-sm-mt {
+                    margin-top: 3rem!important;
+                }
+            }
+            .my-auto {
+                margin-top: 3rem !important;
+            }
+
+        </style>
     {% endaddtoblock %}
 
-    {% render_placeholder object.heading %}
+    <!--=============== Hero Section ===============-->
+    <section class="hero gray-bg" id="hero"
+             style="background: url({{ object.top_image.url }}) no-repeat; background-size: cover;">
+        <div class="container d-flex align-items-center">
 
-    <div class="body-container">
+            <div class="heading">
+                <p class="wow fadeInUp">My Project</p>
+                <h1 class="wow fadeInUp" data-wow-delay="0.3s">{{ object.title }}<span class="ellipsis"></span></h1>
+                <p class="wow fadeInUp" data-wow-delay="0.6s">{{ object.skills }}</p>
+            </div>
+
+        </div>
+    </section>
+    <!--=============== End Hero Section ===============-->
+
+
+    <div class="body-container mt-5">
         <section class="portfolio-details pb-40">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="portfolio-meta">
-                        <ul>
-                            <li class="row">
-                                <div class="col-md-4 no-padding-right">
-                                    <i class="fa fa-building"></i>
-                                    <span>Client</span>
-                                </div>
-                                <div class="col-md-8 no-padding-left">
-                                    {{ project.client }}
-                                </div>
-                            </li>
-                            <li class="row">
-                                <div class="col-md-4 no-padding-right">
-                                    <i class="fa fa-user"></i>
-                                    <span>Role</span>
-                                </div>
-                                <div class="col-md-8 no-padding-left">
-                                    {{ project.roles }}
-                                </div>
-                            </li>
-                            <li class="row">
-                                <div class="col-md-4 no-padding-right">
-                                    <i class="fa fa-coffee"></i>
-                                    <span>Skills</span>
-                                </div>
-                                <div class="col-md-8 no-padding-left">
-                                    {{ project.skills }}
-                                </div>
-                            </li>
-                            <li class="row">
-                                <div class="col-md-4 no-padding-right">
-                                    <i class="fa fa-calendar"></i>
-                                    <span>Length</span>
-                                </div>
-                                <div class="col-md-8 no-padding-left">
-                                    {{ project.length }}
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="project-desc">
-                        <h3>
-                            <span class="ellipsis"></span><a class="project-title"
-                                                             href="/portfolio/{{ project.slug }}">{{ project.title }}</a>
-                            <ul class="horizontal float-right">
-                                <li>
-                                    <a data-toggle="modal" data-target="#screenshotModal-{{ project.slug }}"
-                                       class="pointer">
-                                        <i class="fa fa-picture-o"></i>
-                                    </a>
-
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="screenshotModal-{{ project.slug }}"
-                                         tabindex="-1" role="dialog"
-                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-body">
-                                                    <div id="carouselScreenshotControls-{{ project.slug }}"
-                                                         class="carousel slide"
-                                                         data-ride="carousel">
-                                                        <div class="carousel-inner">
-                                                            {% for media in project.mediaasset_set.all %}
-                                                                <div class="carousel-item {% if forloop.first %}active {% endif %}">
-                                                                    <img class="d-block img-slide"
-                                                                         src="{{ media.media_asset.url }}"
-                                                                         alt="{{ media.name }}"/>
-                                                                </div>
-                                                            {% endfor %}
-                                                        </div>
-                                                        <a class="carousel-control-prev"
-                                                           href="#carouselScreenshotControls-{{ project.slug }}"
-                                                           role="button"
-                                                           data-slide="prev">
-                                                            <span class="carousel-control-prev-icon"
-                                                                  aria-hidden="true"></span>
-                                                            <span class="sr-only">Previous</span>
-                                                        </a>
-                                                        <a class="carousel-control-next"
-                                                           href="#carouselScreenshotControls-{{ project.slug }}"
-                                                           role="button"
-                                                           data-slide="next">
-                                                            <span class="carousel-control-next-icon"
-                                                                  aria-hidden="true"></span>
-                                                            <span class="sr-only">Next</span>
-                                                        </a>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="portfolio-meta">
+                            <ul>
+                                <li class="row">
+                                    <div class="col-md-4 no-padding-right">
+                                        <i class="fa fa-building"></i>
+                                        <span>Client</span>
+                                    </div>
+                                    <div class="col-md-8 no-padding-left">
+                                        {{ object.client }}
+                                    </div>
+                                </li>
+                                <li class="row">
+                                    <div class="col-md-4 no-padding-right">
+                                        <i class="fa fa-user"></i>
+                                        <span>Role</span>
+                                    </div>
+                                    <div class="col-md-8 no-padding-left">
+                                        {{ object.roles }}
+                                    </div>
+                                </li>
+                                <li class="row">
+                                    <div class="col-md-4 no-padding-right">
+                                        <i class="fa fa-coffee"></i>
+                                        <span>Skills</span>
+                                    </div>
+                                    <div class="col-md-8 no-padding-left">
+                                        {{ object.skills }}
+                                    </div>
+                                </li>
+                                <li class="row">
+                                    <div class="col-md-4 no-padding-right">
+                                        <i class="fa fa-calendar"></i>
+                                        <span>Length</span>
+                                    </div>
+                                    <div class="col-md-8 no-padding-left">
+                                        {{ object.length }}
                                     </div>
                                 </li>
                             </ul>
-                        </h3>
-                        <p>{{ project.short_description }}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="project-desc">
+                            <h3>
+                                {#                            <span class="ellipsis"></span><a class="project-title"#}
+                                {#                                                             href="/portfolio/{{ project.slug }}">{{ project.title }}</a>#}
+                                <span class="title-sm-mt">{{ object.title }} </span>
+                                <ul class="horizontal float-right title-sm-mt">
+                                    {% for demo_url in object.demourlitem_set.all %}
+                                        <li>
+                                            <a href="{{ demo_url.demo_url }}" class="pointer">
+                                                {% if demo_url.type == 1 %}
+                                                    <i class="fa fa-apple"></i>
+                                                {% elif demo_url.type == 2 %}
+                                                    <i class="fa fa-android"></i>
+                                                {% elif demo_url.type == 3 %}
+                                                    <i class="fa fa-globe"></i>
+                                                {% endif %}
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </h3>
+                            <p>{{ object.short_description }}</p>
+                        </div>
                     </div>
                 </div>
+
+                <div class="row mx-auto my-auto">
+                    <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            {% for media in object.mediaasset_set.all %}
+                                <div class="carousel-item {% if forloop.first %} active {% endif %}">
+                                    <img class="d-block col-sm-12 col-md-4 img-fluid max-media-img-height" src="{{ media.media_asset.url }}">
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <a class="carousel-control-prev" href="#recipeCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#recipeCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+
             </div>
-        </div>
-    </section>
+        </section>
+
+{#    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">#}
+{#        <ol class="carousel-indicators">#}
+{#            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>#}
+{#            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>#}
+{#            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>#}
+{#        </ol>#}
+{#        <div class="carousel-inner" role="listbox">#}
+{#            {% for media in object.mediaasset_set.all %}#}
+{#            <div class="carousel-item {% if forloop.first %} active {% endif %}">#}
+{#                <img class="d-block img-fluid" src="{{ media.media_asset.url }}" alt="{{ media.name }}">#}
+{#            </div>#}
+{#            {% endfor %}#}
+{#        </div>#}
+{#        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">#}
+{#            <span class="carousel-control-prev-icon" aria-hidden="true"></span>#}
+{#            <span class="sr-only">Previous</span>#}
+{#        </a>#}
+{#        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">#}
+{#            <span class="carousel-control-next-icon" aria-hidden="true"></span>#}
+{#            <span class="sr-only">Next</span>#}
+{#        </a>#}
+{#    </div>#}
 
     </div>
 
     {% addtoblock 'js' %}
+        <script lang="js">
+            $('#recipeCarousel').carousel({
+              interval: 10000
+            })
 
+            $('.carousel .carousel-item').each(function(){
+                var next = $(this).next();
+                if (!next.length) {
+                    next = $(this).siblings(':first');
+                }
+                next.children(':first-child').clone().appendTo($(this));
+
+                for (var i=0;i<2;i++) {
+                    next=next.next();
+                    if (!next.length) {
+                        next = $(this).siblings(':first');
+                    }
+
+                    next.children(':first-child').clone().appendTo($(this));
+                  }
+            });
+
+        </script>
     {% endaddtoblock  %}
 
 {% endblock content %}

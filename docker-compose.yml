@@ -31,7 +31,7 @@ services:
     restart: always
     volumes:
       - ./web:/app
-    # command: bash -c "python manage.py migrate && gunicorn minh_portfolio.wsgi -b 0.0.0.0:8012"
+    # command: bash -c "python manage.py migrate && gunicorn minh_portfolio.wsgi -b 0.0.0.0:8014"
     command: bash -c "gunicorn minh_portfolio.wsgi -b 0.0.0.0:8014"
     depends_on:
       - db

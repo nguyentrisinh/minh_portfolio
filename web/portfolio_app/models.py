@@ -55,7 +55,7 @@ class Project(CMSPlugin):
     # published_date = models.DateTimeField(null=True, blank=True)
 
     # Placeholder property
-    heading = PlaceholderField('project_heading')
+    use_case = PlaceholderField('project_heading')
 
     tags = models.ManyToManyField(Tag, verbose_name=_('tag'), related_name='project')
 
