@@ -145,6 +145,9 @@ INSTALLED_APPS = (
     'aldryn_style',
     'taggit_autosuggest',
 
+    # Compressor for django project
+    'compressor',
+
     'hero_area',
     'about_me',
     'contact_me',
@@ -214,3 +217,19 @@ THUMBNAIL_PROCESSORS = (
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters'
 )
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # other finders..
+    'compressor.finders.CompressorFinder',
+)
+
+COMPRESS_ENABLED = True
+COMPRESS_OFFLINE = True
+
+COMPRESS_CSS_FILTERS = [
+    'compressor.filters.css_default.CssAbsoluteFilter',
+    'compressor.filters.cssmin.CSSMinFilter',
+    'compressor.filters.datauri.CssDataUriFilter',
+]
