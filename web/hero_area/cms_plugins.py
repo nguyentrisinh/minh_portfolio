@@ -8,7 +8,7 @@ from .models import HeroArea, ShortHeroArea
 class HeroAreaComponentPlugin(CMSPluginBase):
     model = HeroArea
     render_template = 'hero_area_plugin/plugin/hero_area_component.html'
-    cache = False
+    cache = True
 
     def render(self, context, instance, placeholder):
         context = super(HeroAreaComponentPlugin, self).render(context, instance, placeholder)

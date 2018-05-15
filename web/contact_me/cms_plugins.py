@@ -8,7 +8,7 @@ from .models import ContactMe, Message
 class ContactMeComponentPlugin(CMSPluginBase):
     model = ContactMe
     render_template = 'contact_me_plugin/plugin/contact_me_component.html'
-    cache = False
+    cache = True
 
     def render(self, context, instance, placeholder):
         context = super(ContactMeComponentPlugin, self).render(context, instance, placeholder)
@@ -29,7 +29,7 @@ class ContactMeComponentPlugin(CMSPluginBase):
 class NoTitleContactMeComponentPlugin(CMSPluginBase):
     model = ContactMe
     render_template = 'contact_me_plugin/plugin/no_title_contact_me_component.html'
-    cache = False
+    cache = True
 
     def render(self, context, instance, placeholder):
         context = super(NoTitleContactMeComponentPlugin, self).render(context, instance, placeholder)
