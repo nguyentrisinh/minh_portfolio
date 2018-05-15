@@ -1,8 +1,13 @@
 {% extends 'base.html' %}
-{% load cms_tags sekizai_tags %}
+{% load cms_tags sekizai_tags compress %}
+
+{% block title %}
+{{ object.title }}
+{% endblock %}
 
 {% block content %}
     {% addtoblock 'css' %}
+        {% compress css %}
         <link rel="stylesheet" href="/minhlt/static/css/custom-style.css">
         <style lang="css">
             @media only screen and (min-width: 970px) {
@@ -52,6 +57,7 @@
             }
 
         </style>
+        {% endcompress %}
     {% endaddtoblock %}
 
     <!--=============== Hero Section ===============-->
@@ -191,6 +197,7 @@
     </div>
 
     {% addtoblock 'js' %}
+        {% compress js %}
         <script lang="js">
             $('#recipeCarousel').carousel({
               interval: 10000
@@ -214,6 +221,7 @@
             });
 
         </script>
+        {% endcompress %}
     {% endaddtoblock  %}
 
 {% endblock content %}

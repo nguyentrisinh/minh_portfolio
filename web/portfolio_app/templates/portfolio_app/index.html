@@ -1,9 +1,15 @@
 {% extends 'base.html' %}
-{% load cms_tags sekizai_tags %}
+{% load cms_tags sekizai_tags compress %}
+
+{% block title %}
+My Portfolio
+{% endblock %}
 
 {% block content %}
     {% addtoblock 'css' %}
+        {% compress css %}
         <link rel="stylesheet" href="/minhlt/static/css/custom-style.css">
+        {% endcompress %}
     {% endaddtoblock %}
 
     <section class="body-container">
@@ -138,17 +144,17 @@
                                                                        href="#carouselScreenshotControls-{{ project.slug }}"
                                                                        role="button"
                                                                        data-slide="prev">
-                                                            <span class="carousel-control-prev-icon"
-                                                                  aria-hidden="true"></span>
-                                                                        <span class="sr-only">Previous</span>
+                                                                            <span class="carousel-control-prev-icon"
+                                                                                  aria-hidden="true"></span>
+                                                                                        <span class="sr-only">Previous</span>
                                                                     </a>
                                                                     <a class="carousel-control-next"
                                                                        href="#carouselScreenshotControls-{{ project.slug }}"
                                                                        role="button"
                                                                        data-slide="next">
-                                                            <span class="carousel-control-next-icon"
-                                                                  aria-hidden="true"></span>
-                                                                        <span class="sr-only">Next</span>
+                                                                            <span class="carousel-control-next-icon"
+                                                                            aria-hidden="true"></span>
+                                                                            <span class="sr-only">Next</span>
                                                                     </a>
                                                                 </div>
 
