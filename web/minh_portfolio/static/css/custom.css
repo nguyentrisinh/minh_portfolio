@@ -33,3 +33,9 @@
 .hire-me-btn-style-mobile:hover {
     color: #48e300 !important;
 }
+
+.calendly-badge-widget {
+    right: unset!important;
+    left: 20px!important;
+    bottom: 30px!important;
+}
