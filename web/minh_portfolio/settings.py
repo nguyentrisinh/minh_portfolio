@@ -152,6 +152,7 @@ INSTALLED_APPS = (
     'about_me',
     'contact_me',
     'portfolio_app',
+    'addons_plugin',
 
     'minh_portfolio'
 )

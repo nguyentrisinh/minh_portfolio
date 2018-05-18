@@ -9,6 +9,5 @@ var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
 })();
 
 Tawk_API.onChatStarted = function(){
-    //place your code here
-    console.log('Test')
+
 };
