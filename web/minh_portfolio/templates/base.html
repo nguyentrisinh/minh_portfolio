@@ -2,11 +2,10 @@
 <!doctype html>
 <html>
     <head>
-        <title>{% block title %}This is my new project home page{% endblock title %}</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
                 <!-- Page title -->
-        <title>Macron | Minimal HTML Portfolio Template</title>
+        <title>Minh Luu Portfolio - {% block title %} {% endblock title %}</title>
 
         <!-- Favicon -->
         <link rel="shortcut icon" href="/minhlt/static/img/favicon.ico">
@@ -61,6 +60,8 @@
 
                     <ul class="nav nav-list-style hidden-md-down">
                         {% show_menu 0 100 100 100 %}
+                        {% static_placeholder "calendly_addon" %}
+
                         <li class="child sibling">
                             <a class="hire_me_btn_style" href="https://www.upwork.com/o/profiles/users/_~01099391654d0f2fa1/" target="_blank">Hire Me</a>
                         </li>
@@ -79,6 +80,9 @@
                      <!-- Navbar Menu -->
                     <ul class="navbar-menu list-unstyled text-center">
                         {% show_menu 0 100 100 100 %}
+
+                        {% static_placeholder "calendly_addon" %}
+
                         <li class="child sibling">
                             <a class="hire-me-btn-style-mobile" href="https://www.upwork.com/o/profiles/users/_~01099391654d0f2fa1/" target="_blank">Hire Me</a>
                         </li>
@@ -152,19 +156,12 @@
         {% endcompress %}
 
 
-        <!-- Calendly badge widget begin -->
-{#        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>#}
-{#        <script type="text/javascript">#}
-{#            console.log({{ title }})#}
-{#            Calendly.initBadgeWidget({#}
-{#                url: 'https://calendly.com/nguyentrisinh0810/custom-event-meeting',#}
-{#                text: 'Schedule time with me',#}
-{#                color: '#76b51b',#}
-{#                branding: true#}
-{#            });#}
-{#        </script>#}
-        <!-- Calendly badge widget end -->
-
         {% render_block "js" %}
     </body>
 </html>
+
+{#<!-- Calendly link widget begin -->#}
+{#<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">#}
+{#<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>#}
+{#<a href="" onclick="Calendly.showPopupWidget('https://calendly.com/nguyentrisinh0810/custom-event-meeting');return false;">Schedule time with me</a>#}
+{#<!-- Calendly link widget end -->#}
