@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a24433ad-9512-4112-b3fe-eef5a93026c2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/minh_portfolio/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/minh_portfolio/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/minh_portfolio/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/minh_portfolio/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,20 +16,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/minh_portfolio/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
+            <state relative-caret-position="2207">
               <caret line="209" column="19" lean-forward="true" selection-start-line="209" selection-start-column="19" selection-end-line="209" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/minh_portfolio/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+            <state relative-caret-position="306">
+              <caret line="78" column="88" selection-start-line="78" selection-start-column="88" selection-end-line="78" selection-end-column="88" />
             </state>
           </provider>
         </entry>
@@ -182,8 +179,8 @@
         <option value="$PROJECT_DIR$/web/addons_plugin/templates/addons_plugin/plugin/calendly-addon-menu-component.html" />
         <option value="$PROJECT_DIR$/web/requirements.txt" />
         <option value="$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/index.html" />
-        <option value="$PROJECT_DIR$/web/minh_portfolio/templates/base.html" />
         <option value="$PROJECT_DIR$/web/minh_portfolio/settings.py" />
+        <option value="$PROJECT_DIR$/web/minh_portfolio/templates/base.html" />
       </list>
     </option>
   </component>
@@ -702,17 +699,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/minh_portfolio/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/web/minh_portfolio/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+        <state relative-caret-position="2207">
+          <caret line="209" column="19" lean-forward="true" selection-start-line="209" selection-start-column="19" selection-end-line="209" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/minh_portfolio/settings.py">
+    <entry file="file://$PROJECT_DIR$/web/minh_portfolio/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="209" column="19" lean-forward="true" selection-start-line="209" selection-start-column="19" selection-end-line="209" selection-end-column="19" />
+        <state relative-caret-position="306">
+          <caret line="78" column="88" selection-start-line="78" selection-start-column="88" selection-end-line="78" selection-end-column="88" />
         </state>
       </provider>
     </entry>
