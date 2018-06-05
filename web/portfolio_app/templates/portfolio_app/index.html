@@ -7,9 +7,9 @@ My Portfolio
 
 {% block content %}
     {% addtoblock 'css' %}
-{#        {% compress css %}#}
+        {% compress css %}
         <link rel="stylesheet" href="/minhlt/static/css/custom-style.css">
-{#        {% endcompress %}#}
+        {% endcompress %}
     {% endaddtoblock %}
 
     <section class="body-container">
@@ -167,7 +167,7 @@ My Portfolio
                                     </h3>
                                     <p>{{ project.short_description }}</p>
                                 </div>
-                            </div>c
+                            </div>
                         </div>
                     </div>
                 </section>

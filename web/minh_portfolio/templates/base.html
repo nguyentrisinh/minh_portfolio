@@ -10,23 +10,21 @@
         <!-- Favicon -->
         <link rel="shortcut icon" href="/minhlt/static/img/favicon.ico">
 
-        <link rel="stylesheet" href="http://test-bf91.kxcdn.com/static/CACHE/css/ddb296ab212c.css">
+        {% compress css %}
+        <!-- Font Awesome Stylesheet -->
+        <link rel="stylesheet" href="/minhlt/static/css/font-awesome.css">
+        <!-- Bootstrap Stylesheet -->
+        <link rel="stylesheet" href="/minhlt/static/css/bootstrap.css">
+        <!-- Lightbox Stylesheet -->
+        <link rel="stylesheet" href="/minhlt/static/css/jquery.fancybox.css">
+        <!-- Animate.CSS Stylesheet -->
+        <link rel="stylesheet" href="/minhlt/static/css/animate.css">
+        <!-- Custom Stylesheet -->
+        <link rel="stylesheet" href="/minhlt/static/css/style.default.css">
 
-{#        {% compress css %}#}
-{#        <!-- Font Awesome Stylesheet -->#}
-{#        <link rel="stylesheet" href="/minhlt/static/css/font-awesome.css">#}
-{#        <!-- Bootstrap Stylesheet -->#}
-{#        <link rel="stylesheet" href="/minhlt/static/css/bootstrap.css">#}
-{#        <!-- Lightbox Stylesheet -->#}
-{#        <link rel="stylesheet" href="/minhlt/static/css/jquery.fancybox.css">#}
-{#        <!-- Animate.CSS Stylesheet -->#}
-{#        <link rel="stylesheet" href="/minhlt/static/css/animate.css">#}
-{#        <!-- Custom Stylesheet -->#}
-{#        <link rel="stylesheet" href="/minhlt/static/css/style.default.css">#}
-{##}
-{#        <!-- Custom Stylesheet -->#}
-{#        <link rel="stylesheet" href="/minhlt/static/css/custom.css">#}
-{#        {% endcompress %}#}
+        <!-- Custom Stylesheet -->
+        <link rel="stylesheet" href="/minhlt/static/css/custom.css">
+        {% endcompress %}
 
         <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
@@ -76,8 +74,7 @@
             <div class="navbar-outer">
                 <div class="navbar-inner d-flex justify-content-center align-items-center">
                     <a id="close-btn" href="#">
-                        <img src="http://test-bf91.kxcdn.com/minhlt/static/img/close.svg" alt="close" class="img-fluid">
-{#                        <img src="/minhlt/static/img/close.svg" alt="close" class="img-fluid">#}
+                        <img src="/minhlt/static/img/close.svg" alt="close" class="img-fluid">
                     </a>
 
                      <!-- Navbar Menu -->
@@ -139,7 +136,7 @@
         <!-- Counter Up -->
         <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 
-{#        {% compress js file base %}#}
+        {% compress js file base %}
         <!-- Bootstrap -->
         <script src="/minhlt/static/js/bootstrap.min.js"></script>
         <!-- Mixitup -->
@@ -156,7 +153,7 @@
         <script src="/minhlt/static/js/jquery.validate.min.js"></script>
         <!-- Custom Script -->
         <script src="/minhlt/static/js/script.js"></script>
-{#        {% endcompress %}#}
+        {% endcompress %}
 
 
         {% render_block "js" %}
